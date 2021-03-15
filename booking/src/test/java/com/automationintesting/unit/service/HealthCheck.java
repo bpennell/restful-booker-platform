@@ -33,7 +33,7 @@ public class HealthCheck {
       .uri(new URI("http://localhost:3000/booking/actuator/health"))
       .GET()
       .build();
-    Response response = HttpRequest.get("http://localhost:3000/booking/actuator/health")
+    Response response = HttpRequest.get("http://localhost:3000/booking/actuator/health");
     Assert.assertEquals(200, response.getStatusCode());
     Assert.assertEquals("{\"status\":\"UP\"}", response.getBody());
     }
