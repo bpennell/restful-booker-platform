@@ -32,10 +32,11 @@ public class ReportContractTest {
     // methods to run as tests
     @Test
     public void checksingleRoomContractTest() throws JSONException, FileNotFoundException, URISyntaxException {
-        Assert.assertEquals("chicken", 1, 0);
+        // Assert.assertEquals("chicken", 1, 0);
         // First we make an HTTP request to get the Booking from Report API
         Response response = given()
-                                .get("http://localhost:8080/report/room/1");
+                                  .get("http://localhost:8080/report/room/1");
+        //                            .get("https://team5.automationintesting.online/report/room/1");
 
         // Next we take the body of the HTTP response and convert it into a JSONObject
         JSONObject parsedResponse = new JSONObject(response.body().prettyPrint());
